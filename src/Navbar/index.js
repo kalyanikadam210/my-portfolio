@@ -3,6 +3,7 @@ import {FaBars,FaReact } from 'react-icons/fa'
 import { Link } from "react-router-dom";
 import {HiX} from 'react-icons/hi';
 import "./style.scss";
+import logo from '../image/logo.png'
 
 const data = [
     {
@@ -45,7 +46,7 @@ const Navbar =()=>{
             <nav className="navbar">
                 <div className="navbar_container">
                  <Link to={'/'} className='navbar_container_logo'>
-                 <FaReact size={30}/>
+                   <img src={logo}  alt='logo' width={140} />
                  
                  </Link>
                 </div>
