@@ -1,6 +1,6 @@
 import React from "react";
-import PageHeaderContent from "../../src/utils.js/PageHeaderContent"
-import { BsInfoCircleFill } from "react-icons/bs";
+
+
 import ImageOne from '../../src/image/image1.jpg';
 import ImageTwo from '../../src/image/image2.jpg';
 import ImageThree from "../../src/image/image3.jpg";
@@ -83,10 +83,6 @@ const Portfolio = () => {
 
   return (
     <section id="portfolio" className="portfolio">
-      <PageHeaderContent
-        headerText="My Portfolio"
-        icon={<BsInfoCircleFill size={40} />}
-      />
       <div className="portfolio__content">
         <ul className="portfolio__content__filter">
           {filterData.map((item) => (

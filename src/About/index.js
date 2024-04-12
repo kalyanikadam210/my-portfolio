@@ -1,6 +1,6 @@
 import React from "react";
-import PageHeaderContent from "../utils.js/PageHeaderContent";
-import { BsInfoCircleFill } from 'react-icons/bs'
+
+
 import { Animate } from 'react-simple-animate'
 import './style.scss';
 import { DiApple, DiAndroid } from "react-icons/di"
@@ -43,10 +43,7 @@ const About = () => {
    return (
 
       <section id="about" className="about">
-         <PageHeaderContent
-            headerText='About Me'
-            icon={<BsInfoCircleFill size={30} />}
-         />
+         
 
          <div className="about_content">
             <div className="about_content_personalWrapper">

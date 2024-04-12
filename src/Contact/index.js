@@ -10,10 +10,7 @@ import '../Contact/style.scss'
 const Contact = () => {
   return (
     <section id="contact" className="contact">
-      <PageHeaderContent
-        headerText='My Contact'
-        icon={<BsInfoCircleFill size={40} />}
-      />
+      
 
       <div className="contact_content">
         <Animate
@@ -26,7 +23,7 @@ const Contact = () => {
           end={{
             transform: 'translateX(0px)'
           }}>
-          <h3 className="contact_content_header-text">Let's Talk</h3>
+          
         </Animate>
         <Animate
           play

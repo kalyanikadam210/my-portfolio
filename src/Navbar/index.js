@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import {FaBars,FaReact } from 'react-icons/fa'
+
 import { Link } from "react-router-dom";
-import {HiX} from 'react-icons/hi';
+
 import "./style.scss";
 import logo from '../image/logo.png'
 
@@ -15,15 +15,15 @@ const data = [
     to:'/about'
 },
 {
-    label:'SKILL',
+    label:'SKILLS',
     to:'/skill'
 },
 {
-    label:'RESUME',
+    label:'ACHIEVEMENTS',
     to:'/resume'
 },
 {
-    label:'PORTFOLIO',
+    label:'PROJECT',
     to:'/portfolio'
 },
 {
@@ -66,9 +66,7 @@ const Navbar =()=>{
                     }
                 </ul>
                 <div className="nav-icon" onClick={handleToggleIcon}>
-                  {
-                    ToggleIcon ? <HiX size={30}/>:<FaBars size={30}/>
-                  }
+                
                 </div>
                 </nav>
             </div>

@@ -16,10 +16,7 @@ import { MdWork } from "react-icons/md"
 const Resume = () => {
    return (
       <section id="resume" className="resume">
-         <PageHeaderContent
-            headerText='my resume'
-            icon={<BsInfoCircleFill size={40} />}
-         />
+      
 
          <div className="timeline">
 
