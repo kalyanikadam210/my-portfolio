@@ -1,7 +1,8 @@
 .contact{
-    &_content{
-        padding:20px;
-        &_header-text{
+    &__content{
+        padding: 20px;
+
+        &__header-text{
             color: var(--yellow-theme-sub-text-color);
             display: inline-block;
             font-size: 22px;
@@ -14,46 +15,45 @@
             border-bottom: 2px solid var(--yellow-theme-main-color);
         }
 
-        &_header-text::before,
-        &_header-text::after{
+        &__header-text::before,
+        &__header-text::after{
             position: absolute;
             content: "";
             width: 2px;
-            height: 2px;
+            height: 5px;
             background-color: var(--yellow-theme-main-color);
             bottom: -1px;
         }
-        &_header-text::before{
+        &__header-text::before{
             left: 0;
         }
-        &_header-text::after{
+        &__header-text::after{
             right: 0;
         }
-    
 
-        &_form{
+        &__form{
             margin-top: 30px;
 
-            &_controlswrapper{
-                display: grid;
-                grid-template-columns: repeat(2,1fr);
-                gap: 40px;
-                margin-bottom: 30px;
+            &__controlswrapper{
+                  display: grid;
+                  grid-template-columns: repeat(2,1fr);
+                  gap: 40px;
+                  margin-bottom: 30px;
 
-                div{
+                  div{
                     position: relative;
                     .inputName,
                     .inputEmail,
-                    .inputdescription{
+                    .inputDescription{
                         width: 100%;
                         border: 2px solid var(--yellow-theme-main-color);
                         padding: 16px 12px;
                         transition: all 0.5s ease;
                         position: relative;
                         background-color: transparent;
-                        color: var(--yellow-theme-main-color);
-
+                        color: var(--yellow-theme-sub-text-color);
                     }
+
                     .nameLabel,
                     .emailLabel,
                     .descriptionLabel{
@@ -64,52 +64,57 @@
                         transition: all 0.2s ease;
                         color: var(--yellow-theme-sub-text-color);
                         font-size: 16px;
-
                     }
 
                     .inputName:focus,
                     .inputEmail:focus,
-                    .inputdescription:focus{
+                    .inputDescription:focus{
                         outline: none;
                     }
-
-                    
 
                     .inputName:focus + .nameLabel,
                     .inputName:valid + .nameLabel,
                     .inputEmail:focus+.emailLabel,
                     .inputEmail:valid+.emailLabel,
-                    .inputdescription:focus+.descriptionLabel,
-                    .inputdescription:valid+.descriptionLabel{
+                    .inputDescription:focus + .descriptionLabel,
+                    .inputDescription:valid + .descriptionLabel
+                    {
                         font-size: 18px;
                         top: -25px;
                         left: 0px;
                     }
 
-                }
-            }
 
-            button{
-                cursor: pointer;
-                padding: 10px 70px;
-                font-size: 2rem;
-                background: transparent;
-                color: var(--yellow-theme-main-color);
-                border: 1.5px solid var(--yellow-theme-main-color);
-                border-radius: 4px;
-                font-weight: 500;
-
-
-                &:hover{
-                    color: #000;
-                    background: var(--yellow-theme-main-color);
-                }
+                   
+                  }
             }
         }
 
+        button{
+            cursor: pointer;
+            padding: 10px 70px;
+            font-size: 2rem;
+            background: transparent;
+            color: var(--yellow-theme-main-color);
+            border: 1.5px solid var(--yellow-theme-main-color);
+            border-radius: 4px;
+            font-weight: 500;
+
+            &:hover{
+                color: #000;
+                background: var(--yellow-theme-main-color);
+            }
+        }
     }
 }
 
-@media screen {
-    
+
+@media only screen and (max-width : 768px){
+    .contact__content__form{
+        text-align: center;
+
+        &__controlswrapper{
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
 }
