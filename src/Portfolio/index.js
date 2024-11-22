@@ -1,8 +1,7 @@
 import React from "react";
 
-
-import ImageOne from '../../src/image/image1.jpg';
-import ImageTwo from '../../src/image/image2.jpg';
+import ecartPic from "../../src/image/ecartPic.PNG";
+import followFrnd from "../../src/image/followFrnd.PNG";
 import ImageThree from "../../src/image/image3.jpg";
 import ImageFour from "../../src/image/image4.jpg";
 import ImageFive from "../../src/image/image5.jpg";
@@ -12,19 +11,19 @@ import { useState } from "react";
 const portfolioData = [
   {
     id: 2,
-    name: "Ecommerce",
-    image: ImageOne,
-    link: "",
+    name: "E-Cart",
+    image: ecartPic,
+    link: "https://ecart-react-vblm.vercel.app/",
   },
   {
     id: 3,
-    name: "Notes App",
-    link: "",
-    image: ImageTwo,
+    name: "Follow Friend Page",
+    link: "https://baxture-react-assignment-kalyani-kadam.vercel.app/",
+    image: followFrnd,
   },
   {
     id: 2,
-    name: "Supplier Design",
+    name: "User Profiles Page",
     image: ImageThree,
     link: "",
   },
@@ -37,7 +36,7 @@ const portfolioData = [
   },
   {
     id: 3,
-    name: "Shopping cart design",
+    name: "E-cart design",
     image: ImageFive,
     link: "",
   },
@@ -70,6 +69,11 @@ const Portfolio = () => {
     setHoveredValue(index);
   }
 
+  function navigateToProject(url) {
+    if (url) {
+      window.open(url, "_blank");
+    }
+  }
   console.log("====================================");
   console.log(hoveredValue);
   console.log("====================================");
@@ -112,7 +116,9 @@ const Portfolio = () => {
                 {index === hoveredValue && (
                   <div>
                     <p>{item.name}</p>
-                    <button>Visit</button>
+                    <button onClick={() => navigateToProject(item.link)}>
+                      Visit
+                    </button>
                   </div>
                 )}
               </div>
