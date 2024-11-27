@@ -11,14 +11,10 @@ const personalDetails = [
     value: "Kalyani  kadam",
     isLink: false,
   },
-  {
-    label: "age :-",
-    value: "25",
-    isLink: false,
-  },
+
   {
     label: "Address :-",
-    value: "India",
+    value: "India pune ",
     isLink: false,
   },
   {
