@@ -1,3 +1,7 @@
+
+.LinkCursor{
+    cursor: pointer;
+}
 .about {
     &_content {
         display: flex;
@@ -49,7 +53,10 @@
                     padding-bottom: 5px;
                     color: var(--yellow-theme-sub-text-color);
                     border: none;
+                   
                 }
+              
+           
 
 
 
